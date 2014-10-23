@@ -1,0 +1,136 @@
+.footer{
+    background: #1e5799; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #1e5799 0%, #383838 0%, #000000 69%, #000000 93%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#1e5799), color-stop(0%,#383838), color-stop(69%,#000000), color-stop(93%,#000000)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #1e5799 0%,#383838 0%,#000000 69%,#000000 93%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #1e5799 0%,#383838 0%,#000000 69%,#000000 93%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #1e5799 0%,#383838 0%,#000000 69%,#000000 93%); /* IE10+ */
+    background: radial-gradient(ellipse at center, #1e5799 0%,#383838 0%,#000000 69%,#000000 93%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */;
+    width: 100%;
+    position: fixed;
+    margin: -50px 0px 0px 0px;
+    padding-bottom: 1px;
+}
+
+.footer p{
+    color: #ccc;
+}
+
+.header{
+    background: black;
+    width: 100%;
+    height: 20%;
+    padding-top: 1px;
+}
+
+#menu li {  
+    display: inline;  
+    list-style: none;  
+}
+
+
+
+#menu li a {  
+    text-align: center;
+    -webkit-border-radius: 15px;  
+    -moz-border-radius: 15px;  
+    border-radius: 6px; 
+    -webkit-box-shadow: 1px 2px 2px rgba(0,0,0,0.6);  
+    -moz-box-shadow: 1px 2px 2px rgba(0,0,0,0.6);  
+    box-shadow: 1px 2px 2px rgba(0,0,0,0.6);  
+    position: relative;
+    width: 50%;
+    height:4%;
+    color: #ffffff;  
+    background: rgba(0,0,0,0.3);  
+    display: inline-block;  
+    padding: 16px 15px;  
+    outline: none;  
+    text-decoration: none;  
+    margin: 60px 0px 0px 120px;
+}
+#menu{
+    background: transparent url(images/natybos.png) !important;
+    background-repeat:repeat-y !important;
+    background-position:center center !important;
+    background-attachment:scroll !important;
+    background-size:100% 100% !important;
+}
+#map_canvas{
+    width: 100%;
+}
+
+.leaflet-control-layers-selector{
+    margin-bottom: 0px;
+}
+.table_row{
+    display: table-row;
+}
+.table_cell{
+    display: table-cell;
+
+}
+
+.ui-page {
+    background: transparent url(images/1_1.jpg) !important;
+    background-repeat:repeat-y !important;
+    background-position:center center !important;
+    background-attachment:scroll !important;
+    background-size:100% 100% !important;
+}
+.imgGallery{
+    border: 5px solid transparent;
+}
+.imgGallery img{
+    -webkit-border-radius: 5px 10px;
+    border-radius: 20px 20px;
+}
+
+.VidGallery{
+    border: 5px solid transparent;
+}
+.VidGallery img{
+    -webkit-border-radius: 5px 10px;
+    border-radius: 20px 20px;
+}
+
+#galleryVid{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#textos{
+    -webkit-border-radius: 15px;  
+    -moz-border-radius: 15px;  
+    border-radius: 6px; 
+    -webkit-box-shadow: 1px 2px 2px rgba(0,0,0,0.6);  
+    -moz-box-shadow: 1px 2px 2px rgba(0,0,0,0.6);  
+    box-shadow: 1px 2px 2px rgba(0,0,0,0.6);  
+    position: relative;
+    color: #ffffff;  
+    background: rgba(0,0,0,0.3);  
+    display: inline-block;
+    padding: 10px;
+    color: #eee;
+    font-size: 18px;
+    width: 95%;
+}
+
+.natybosInf{
+    -webkit-border-radius: 15px;  
+    -moz-border-radius: 15px;  
+    border-radius: 6px; 
+    -webkit-box-shadow: 1px 2px 2px rgba(0,0,0,0.6);  
+    -moz-box-shadow: 1px 2px 2px rgba(0,0,0,0.6);  
+    box-shadow: 1px 2px 2px rgba(0,0,0,0.6);  
+    position: relative;
+    color: #ffffff;  
+    background: rgba(0,0,0,0.3);  
+    display: inline-block;
+    padding: 10px;
+    color: #eee;
+    font-size: 18px;
+    width: 95%;
+}
+

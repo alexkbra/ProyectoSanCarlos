@@ -1,113 +1,119 @@
 <!DOCTYPE html>
-	  <!DOCTYPE html>
 <html>
-  	<head>
-	    <meta charset="utf-8" />
-	    <title>Capacitacion</title>
+    <head>
+        <meta charset="utf-8" />
+        <title>San Carlos</title>
+        <meta name="X-Frame-Options" content="allow-from" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	    <meta name="format-detection" content="telephone=no" />
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--link rel="stylesheet" type="text/css" href="jquery.mobile-1.3.2/jquery.mobile.theme-1.3.2.css" />
+        <link rel="stylesheet" type="text/css" href="jquery.mobile-1.3.2/jquery.mobile.structure-1.3.2.css" /-->
 
-	    <link rel="stylesheet" type="text/css" href="jquery.mobile-1.3.2/jquery.mobile.theme-1.3.2.css" />
-   		<link rel="stylesheet" type="text/css" href="jquery.mobile-1.3.2/jquery.mobile.structure-1.3.2.css" />
+        <!-- jquery mobile -->
+        <link rel="stylesheet" type="text/css" href="jquery.mobile-1.3.2/jquery.mobile-1.3.2.css" />
+        <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.3.2/jquery.js"></script>
+        <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.3.2/jquery.mobile-1.3.2.js"></script>
+        <!-- end jquery mobile -->
 
-   		<script type="text/javascript" charset="utf-8" src="jquery.mobile-1.3.2/jquery.js"></script>
-    	<script type="text/javascript" charset="utf-8" src="jquery.mobile-1.3.2/jquery.mobile-1.3.2.js"></script>
+        <!--script type="text/javascript" charset="utf-8" src="https://maps.google.com/maps/api/js?sensor=false"></script-->
+        <!--script type="text/javascript" charset="utf-8" src="jquery.ui.map/jquery.ui.map.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="jquery.ui.map/jquery.ui.map.services.min.js"></script-->
 
-    	<script type="text/javascript" charset="utf-8" src="ejemplo/views/ejemplo.views.js"></script>
-    	<script type="text/javascript" charset="utf-8" src="ejemplo/controllers/ejemplo.controller.js"></script>
+        <!-- leaflet -->
+        <script type="text/javascript" src="https://www.google.com/jsapi?key="></script>
+        <script type="text/javascript" >
+            var mapsmarkerjspro = {"zoom_in": "Zoom in", "zoom_out": "Zoom out", "googlemaps_language": "", "googlemaps_libraries": "", "googlemaps_base_domain": "&base_domain=", "bing_culture": "es_ES", "google_adsense_status": "disabled", "google_styling_json": "disabled", "minimap_show": "Mostrar minimapa", "minimap_hide": "Ocultar minimapa", "minimap_status": "collapsed", "fullscreen_button_title": "Ver a pantalla completa", "fullscreen_button_title_exit": "Exit fullscreen", "fullscreen_button_position": "topleft", "maxzoom": "21", "google_maps_api_status": "enabled", "meters": "meters", "feet": "feet"};
+        </script>
+        <link rel="stylesheet" type="text/css" href="leaflet/leaflet.min.css" />
+        <script src="leaflet/leaflet-core.js"></script>
+        <script src="leaflet/leaflet-addons.js"></script>
+        <!-- end leaflet -->
 
-    	<script type="text/javascript" charset="utf-8" src="sybase/mb3_beans.js"></script>
-    	<script type="text/javascript" charset="utf-8" src="sybase/mb3_connector.js"></script>
+        <link rel="stylesheet" type="text/css" href="jquery.mobile-1.3.2/estilos.css" />
+        <script type="text/javascript" charset="utf-8" src="sybase/mb3_beans.js"></script>
+        <script type="text/javascript" charset="utf-8" src="sybase/mb3.js"></script>
+        <script type="text/javascript" charset="utf-8" src="sybase/mb3_connector.js"></script>
 
-    	<script type="text/javascript" charset="utf-8" src="sybase/mb3.js"></script>
+        <script type="text/javascript" charset="utf-8" src="SanCarlos/views/login.views.js"></script>
+        <script type="text/javascript" charset="utf-8" src="SanCarlos/controllers/login.controller.js"></script>
+
+        <script type="text/javascript" charset="utf-8" src="SanCarlos/views/mapa.views.js"></script>
+        <script type="text/javascript" charset="utf-8" src="SanCarlos/controllers/mapa.controller.js"></script>
+
+        <script type="text/javascript" charset="utf-8" src="SanCarlos/views/detalle.views.js"></script>
+        <script type="text/javascript" charset="utf-8" src="SanCarlos/controllers/detalle.controller.js"></script>
+
+        <script type="text/javascript" charset="utf-8" src="SanCarlos/views/googlePlus.views.js"></script>
+        <script type="text/javascript" charset="utf-8" src="SanCarlos/controllers/googlePlus.controller.js"></script>
+        
+        <script type="text/javascript" charset="utf-8" src="SanCarlos/views/natybosInf.views.js"></script>
+        <script type="text/javascript" charset="utf-8" src="SanCarlos/controllers/natybosInf.controller.js"></script>
+    </head>
+    <body>
+
+        <div data-role="page" id="login">
+            <div data-role="header" id="header_login" data-position="fixed" data-fullscreen="false" data-tap-toggle="false">
+
+            </div>
+            <div data-role="content" id="content_login">
 
 
-	</head>
-	<body>
-		<div data-role="page" id="login">
-			<div data-role="header" id="header_login" data-position="fixed">
-				
-			</div>
-			<div data-role="content" id="content_login">
-				
-			</div>
-			<div data-role="footer" id="footer_login" data-position="fixed"> 
+            </div>
+            <div data-role="footer" id="footer_login" data-position="fixed" data-fullscreen="false" data-tap-toggle="false"> 
 
-			</div>
-		</div>
+            </div>
+        </div>
 
-		<div data-role="page" id="main">
-			<div data-role="header" id="header_main" data-position="fixed">
-				
-			</div>
-			<div data-role="content" id="content_main">
+        <div data-role="page" id="mapa">
+            <div data-role="header" id="header_mapa" data-position="fixed" data-fullscreen="false" data-tap-toggle="false">
 
-			</div>
-			<div data-role="footer" id="footer_main" data-position="fixed">
-				
-			</div>
-		</div>
+            </div>
+            <div data-role="content" id="content_mapa" style="padding: 0px;">
 
-		<div data-role="page" id="ListUser">
-			<div data-role="header" id="header_ListUser" data-position="fixed">
-				
-			</div>
-			<div data-role="content" id="content_ListUser">
+            </div>
+            <div data-role="footer" id="footer_mapa" data-position="fixed" data-fullscreen="false" data-tap-toggle="false">
 
-			</div>
-			<div data-role="footer" id="footer_ListUser" data-position="fixed">
-				
-			</div>
-		</div>
+            </div>
+        </div>
 
-		<div data-role="page" id="SearchUser">
-			<div data-role="header" id="header_SearchUser" data-position="fixed">
-				
-			</div>
-			<div data-role="content" id="content_SearchUser">
+        <div data-role="page" id="detalle" class="gallery-page" data-cache="false">
+            <div data-role="header" id="header_detalle" data-position="fixed" >
 
-			</div>
-			<div data-role="footer" id="footer_SearchUser" data-position="fixed">
-				
-			</div>
-		</div>
+            </div>
+            <div data-role="content" id="content_detalle">
+                <div id='galleryImg'></div>
+                <div id='galleryVid'></div>
+                <div id="textos"></div>
+            </div>
+            <div data-role="footer" id="footer_detalle" data-position="fixed">
 
-		<div data-role="page" id="result">
-			<div data-role="header" id="header_result" data-position="fixed">
-				
-			</div>
-			<div data-role="content" id="content_result">
+            </div>
+        </div>
 
-			</div>
-			<div data-role="footer" id="footer_result" data-position="fixed">
-				
-			</div>
-		</div>
+        <div data-role="page" id="googlePlus" data-cache="false">
+            <div data-role="header" id="header_googlePlus" data-position="fixed" >
 
-		<div data-role="page" id="documents">
-			<div data-role="header" id="header_documents" data-position="fixed">
-				
-			</div>
-			<div data-role="content" id="content_documents">
+            </div>
+            <div data-role="content" id="content_googlePlus">
 
-			</div>
-			<div data-role="footer" id="footer_documents" data-position="fixed">
-				
-			</div>
-		</div>
+            </div>
+            <div data-role="footer" id="footer_googlePlus" data-position="fixed">
 
-		<div data-role="page" id="DocumentDetails">
-			<div data-role="header" id="header_DocumentDetails" data-position="fixed">
-				
-			</div>
-			<div data-role="content" id="content_DocumentDetails">
+            </div>
+        </div>
+        
+        <div data-role="page" id="natybosInf" data-cache="false">
+            <div data-role="header" id="header_natybosInf" data-position="fixed" >
 
-			</div>
-			<div data-role="footer" id="footer_DocumentDetails" data-position="fixed">
-				
-			</div>
-		</div>
+            </div>
+            <div data-role="content" id="content_natybosInf">
 
-	</body>
+            </div>
+            <div data-role="footer" id="footer_natybosInf" data-position="fixed">
+
+            </div>
+        </div>
+
+    </body>
 </html>
