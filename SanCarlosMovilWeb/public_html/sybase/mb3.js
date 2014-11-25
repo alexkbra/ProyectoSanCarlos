@@ -9,10 +9,41 @@ function getIdPunto(Id) {
     });
     $("#detalle").trigger('pagecreate');
 }
-
+google.maps.event.addDomListener(window, 'load', pintarPuntos);
 function pintarPuntos() {
-    var listar = new listar_Puntos();
-    listar.Start();
+    /*var listar = new listar_Puntos();
+    listar.Start();*/
+
+    var latlng = new google.maps.LatLng(lat, long);
+    var myOptions = {
+        zoom: 16,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+    var marker = new google.maps.Marker({
+      position: latlng,
+      map: map,
+      title: 'Hello World!',
+      draggable:true,
+      animation: google.maps.Animation.DROP
+    });
+    var infowindow = new google.maps.InfoWindow();
+      infowindow.setContent('<h1>el poli</h1>');
+      google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map, marker);
+    });
+
+
+    google.maps.event.addListener(marker, 'click', function () {
+          if (marker.getAnimation() != null) {
+            marker.setAnimation(null);
+          } else {
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+          }
+    });
 }
 
 function listar_Puntos() {
