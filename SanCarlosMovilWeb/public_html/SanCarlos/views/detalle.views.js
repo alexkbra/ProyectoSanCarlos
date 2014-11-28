@@ -22,6 +22,21 @@ function cargarContenido() {
     var multimediaImagenes = '';
     var multimediaVideos = '';
     var contImg = 0;
+    var buttonBar = '';
+
+    buttonBar += '<ul id="Imagenes">';
+    buttonBar +=    '<li>';
+    buttonBar +=    '   <a href="#imgDiv" data-rel="popup" data-position-to="window" data-role="button" data-inline="true"> Iamagenes </a>';
+    buttonBar +=    '</li>';
+    buttonBar +=    '<li>';
+    buttonBar +=    '   <a href="#videosDiv" data-rel="popup" data-position-to="window" data-role="button" data-inline="true"> Videos </a>';
+    buttonBar +=    '</li>';
+    buttonBar +=    '<li>';
+    buttonBar +=    '   <a href="#textDiv" data-rel="popup" data-position-to="window" data-role="button" data-inline="true"> Descripci&oacute;n </a>';
+    buttonBar +=    '</li>;';
+    buttonBar += '</ul>';
+
+    multimediaImagenes += '<div id="imgDiv"  data-role="popup" data-theme="a" class="ui-corner-all hidenDiv">';
     for (var i = 0; i < imagenes.length; i++) {
         multimediaImagenes += '<div class="table_row imgGallery">';
         for (var j = 0; j < 3 & j < imagenes.length; j++) {
@@ -38,6 +53,9 @@ function cargarContenido() {
         }
         multimediaImagenes += '</div>';
     }
+    multimediaImagenes += '</div>';
+
+    multimediaVideos +='<div id="videosDiv" data-role="popup" data-theme="a" class="ui-corner-all hidenDiv">';
     for (var i = 0; i < videos.length; i++) {
         multimediaVideos += '<div class="VidGallery">';
         multimediaVideos += '<div>';
@@ -50,11 +68,14 @@ function cargarContenido() {
         multimediaVideos += '</div>';
         multimediaVideos += '</div>';
     }
-    
+    multimediaVideos +='</div>';
+
     $(multimediaImagenes).appendTo($("#galleryImg"));
     $(multimediaVideos).appendTo($("#galleryVid"));
+
     var titulos = "";
     var descripciones = "<h1>Descripción</h1> \n";
+    var descripcionesCon = '';
     for (i = 0; i < textos.length; i++) {
         if (textos[i].getTipo() === "Titulo") {
             titulos += "<h2>" + textos[i].getTexto() + "</h2> ,";
@@ -64,8 +85,8 @@ function cargarContenido() {
             }
         }
     }
-    $(titulos).appendTo($("#textos"));
-    $(descripciones).appendTo($("#textos"));
+    descripcionesCon = '<div id="textDiv" erdata-role="popup" data-theme="a" class="ui-corner-all hidenDiv"><div>'+titulos+'</div><div>'+descripciones+'</div></div>';
+    $(descripcionesCon).appendTo($("#textos"));
 }
 function limpiarContenido() {
     $("#galleryImg").empty();
