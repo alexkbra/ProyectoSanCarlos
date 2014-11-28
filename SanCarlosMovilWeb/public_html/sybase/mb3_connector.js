@@ -104,37 +104,37 @@ ListPuntos.prototype.getListPuntos = function(parametros, callback, callbackErro
 };
 
 ListPuntos.prototype.callback = function(data, callback) {
-    $(data).find('Puntos').each(function(index) {
+    $(data).find('punto').each(function(index) {
         var resultPuntos = new Puntos();
-        resultPuntos.setId(parseInt($(this).find('Id').text()));
-        resultPuntos.setNombre($(this).find('Nombre').text());
-        resultPuntos.setDescripcion($(this).find('Descripcion').text());
+        resultPuntos.setId(parseInt($(this).find('id').text()));
+        resultPuntos.setNombre($(this).find('nombre').text());
+        resultPuntos.setDescripcion($(this).find('descripcion').text());
         
-        resultPuntos.setLatitud($(this).find('Latitud').text());
-        resultPuntos.setLongitud($(this).find('Longitud').text());
+        resultPuntos.setLatitud($(this).find('latitud').text());
+        resultPuntos.setLongitud($(this).find('longitud').text());
         
         var lisImg = new Array();
-        $(this).find('Imagenes').each(function(c) {
+        $(this).find('imagen').each(function(c) {
             var imagen = new Imagenes();
-            imagen.setId(parseInt($(this).find('IdImg').text()));
-            imagen.setUrl($(this).find('urlImg').text());
+            imagen.setId(parseInt($(this).find('id').text()));
+            imagen.setUrl($(this).find('url').text());
             lisImg[c] = imagen;
         });
         resultPuntos.setImagenes(lisImg);
         var lisVideos = new Array();
-        $(this).find('Videos').each(function(a) {
+        $(this).find('video').each(function(a) {
             var video = new Videos();
-            video.setId(parseInt($(this).find('IdVideo').text()));
-            video.setUrl($(this).find('urlVideo').text());
+            video.setId(parseInt($(this).find('id').text()));
+            video.setUrl($(this).find('url').text());
             lisVideos[a] = video;
         });
         resultPuntos.setVideos(lisVideos);
         var lisTexto = new Array();
-        $(this).find('Textos').each(function(b) {
+        $(this).find('texto').each(function(b) {
             var texto = new Texto();
-            texto.setId(parseInt($(this).find('IdTexto').text()));
-            texto.setTexto($(this).find('textoTexto').text());
-            texto.setTipo($(this).find('TipoTexto').text());
+            texto.setId(parseInt($(this).find('id').text()));
+            texto.setTexto($(this).find('textValue').text());
+            texto.setTipo($(this).find('tipoTexto').text());
             lisTexto[b] = texto;
         });
         resultPuntos.setTextos(lisTexto);

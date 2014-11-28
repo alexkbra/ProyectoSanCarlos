@@ -15,6 +15,7 @@ $(document).on("pagecreate", "#detalle", function(event) {
 });
 function cargarContenido() {
     var punto = session.getSelectPunto();
+    
     var imagenes = punto.getImagenes();
     var videos = punto.getVideos();
     var textos = punto.getTextos();

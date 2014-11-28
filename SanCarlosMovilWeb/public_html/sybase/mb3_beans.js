@@ -14,6 +14,10 @@ function Session() {
         listPuntos[id] = punto;
     };
 
+    this.getPunto = function (index) {
+        return listPuntos[index];
+    }
+
     this.removePunto = function(id) {
         for (var i = 0; i < listPuntos.length; i++) {
             if (listPuntos[i].getId() === id) {
@@ -49,6 +53,7 @@ function Puntos() {
     var Descripcion = null;
     var Latitud = null;
     var Longitud = null;
+    
     var Imagenes = null;
     var Videos = null;
     var Textos = null;
