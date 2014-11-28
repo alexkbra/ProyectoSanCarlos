@@ -136,5 +136,13 @@
 
 .hidenDiv{
     display: none;
+}
 
+.loadImg{
+     background-image: url("images/Ceric2.gif");
+}
+
+#topBar{
+    width: 100%;
+    height: 100%;
 }

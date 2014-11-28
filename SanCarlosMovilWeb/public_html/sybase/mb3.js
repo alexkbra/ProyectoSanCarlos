@@ -1,28 +1,12 @@
 var session = new Session();
 google.maps.event.addDomListener(window, 'load', pintarPuntos);
 
-function getIdPunto(Id) {
-    session.setSelectPunto(session.getPuntos(Id));
-    //$("#detalle").trigger("create");
-    
-    $.mobile.changePage($("#detalle"), {
-        transition: "slide",
-        reverse: true
-    });
-    $("#detalle").trigger('pagecreate');
-}
+$(document).ready(function () {
+   var listar = new listar_Puntos();
+   listar.Start();
+})
 
 function pintarPuntos() {
-    var listar = new listar_Puntos();
-    listar.Start();
-    
-}
-
-function listar_Puntos() {
-}
-
-listar_Puntos.prototype.onSuccer = function() {
-
     var latlng = new google.maps.LatLng(lat, long);
 
     var myOptions = {
@@ -93,7 +77,16 @@ listar_Puntos.prototype.onSuccer = function() {
               }
         });
     };
-    
+}
+
+function listar_Puntos() {
+}
+
+listar_Puntos.prototype.onSuccer = function() {
+    $.mobile.changePage($("#login"), {
+        transition: "slide",
+        reverse: true
+    });
 };
 
 function paintPuntoDetalle (id) {   
@@ -114,4 +107,3 @@ listar_Puntos.prototype.Start = function() {
     var listPuntos = new ListPuntos();
     listPuntos.getListPuntos(null, this.onSuccer, this.onError);
 };
-
